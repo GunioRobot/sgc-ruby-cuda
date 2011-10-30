@@ -86,9 +86,9 @@ class CudaStream
 
 
     # Let all future operations submitted to any CUDA stream wait until _event_ complete before beginning execution.
-    # @overload wait_event(event)                      
-    # @overload wait_event(event, flags)               
-    # @param (see CudaStream#wait_event) 
+    # @overload wait_event(event)
+    # @overload wait_event(event, flags)
+    # @param (see CudaStream#wait_event)
     def self.wait_event(event, flags = 0)
         status = API::cudaStreamWaitEvent(nil, event.to_api, flags)
         Pvt::handle_error(status, "Failed to make any CUDA stream's future operations to wait event: flags = #{flags}.")

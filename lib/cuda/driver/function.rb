@@ -187,7 +187,7 @@ class CUFunction
     # will execute on the default stream 0.
     # @overload launch_grid_async(xdim, stream)
     # @overload launch_grid_async(xdim, ydim, stream)
-    # @param [Integer] xdim The x dimensional size 
+    # @param [Integer] xdim The x dimensional size
     def launch_grid_async(xdim, ydim = 1, stream)
         s = Pvt::parse_stream(stream)
         status = API::cuLaunchGridAsync(self.to_api, xdim, ydim, s)

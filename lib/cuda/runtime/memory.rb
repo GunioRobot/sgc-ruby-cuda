@@ -34,7 +34,7 @@ class CudaDeviceMemory
 
     # Allocate memory on the device.
     # @param [Integer] nbytes The number of bytes of memory to allocate.
-    # @return [*SGC::Memory::MemoryPointer] A memory pointer to the allocated device memory. 
+    # @return [*SGC::Memory::MemoryPointer] A memory pointer to the allocated device memory.
     #
     # @note The returned memory pointer is enabled to call _free_ method on itself.
     def self.malloc(nbytes)
